@@ -14,8 +14,14 @@ run_worker_first = ["/api/*"]
 [[d1_databases]]
 binding = "DB"
 database_name = "store-db"
-database_id = "d7d6e6dd-5bfa-4e71-a6bd-dd6bb85c7255"
+database_id = "faaba3f8-fb56-42f4-826c-089c0760bf49"
 
 [[kv_namespaces]]
 binding = "CART"
-id = "40add3e30708404f8e8dcde8fc0c5d28"
+id = "18d165d0231348a7843ffe36be38b539"
+[ai]
+binding = "AI"
+
+[[vectorize]]
+binding = "VECTORIZE"
+index_name = "cloudflare-shop-index"
