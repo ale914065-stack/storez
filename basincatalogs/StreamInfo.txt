@@ -1,0 +1,69 @@
+https://f8fb6f6f730b404fb2f273fd789d04df.ingest.cloudflare.com
+{
+"fields": [
+{
+"name": "id",
+"type": "string",
+"required": false
+},
+{
+"name": "country",
+"type": "string",
+"required": false
+},
+{
+"name": "device",
+"type": "string",
+"required": false
+},
+{
+"name": "time",
+"type": "timestamp",
+"required": false,
+"unit": "millisecond"
+},
+{
+"name": "ip",
+"type": "string",
+"required": false
+},
+{
+"name": "meta",
+"type": "json",
+"required": false
+}
+]
+}
+POST https://f8fb6f6f730b404fb2f273fd789d04df.ingest.cloudflare.com HTTP/1.1
+content-type: application/json
+{
+"name": "sample",
+"time": "Wed, 21 Oct 2015 18:27:50 GMT"
+
+}
+
+POST https://f8fb6f6f730b404fb2f273fd789d04df.ingest.cloudflare.com
+HTTP/1.1
+content-type: application/json
+{
+"id": "nhóm 09",
+"country":"VN",
+"device":"ios",
+"ip":"123.3456.57.234",
+"time": 1791853920,
+"meta":{
+"key":"demo",
+"value":"100"
+}
+}
+
+ACCOUNT_ID = "de1d7518f067890180f66ad877cb6b2c"
+BUCKET = "visitors"
+NAMESPACE = "default"
+TABLE = "visitors"
+env config:
+R2_ACCOUNT_ID=de1d7518f067890180f66ad877cb6b2c
+R2_BUCKET=visitors
+R2_ACCESS_KEY_ID=987ecfb4cc6819e35a2f8581955e7e64
+R2_SECRET_ACCESS_KEY=1abbbc86bf0b7fafb94f74ba40e9a9b768b4ba295e92f9d0866
+c33fffe9acebf

@@ -1,0 +1,28 @@
+[project]
+  name = "visitor-ingest-worker"
+  account_id = "de1d7518f067890180f66ad877cb6b2c"
+
+[deployment]
+  preview = true
+  target = "remote"
+
+[worker]
+  compatibility_date = "2024-09-30"
+
+[env.production]
+  ACCOUNT_ID = "de1d7518f067890180f66ad877cb6b2c"
+  BUCKET = "visitors"
+  NAMESPACE = "default"
+  TABLE = "visitors"
+
+[env.production] bindings
+  VISITORS = "r2:visitors"
+
+[env.development]
+  ACCOUNT_ID = "de1d7518f067890180f66ad877cb6b2c"
+  BUCKET = "visitors"
+  NAMESPACE = "default"
+  TABLE = "visitors"
+
+[env.development] bindings
+  VISITORS = "r2:visitors"

@@ -1,0 +1,17 @@
+{
+  "name": "visitor-stream-ingest",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker for visitor stream ingest pipeline to R2",
+  "main": "worker/index.js",
+  "scripts": {
+    "setup": "node scripts/setup.js",
+    "test": "node scripts/test-validate.js",
+    "dev": "npx wrangler dev",
+    "deploy": "npx wrangler publish"
+  },
+  "keywords": ["cloudflare", "worker", "r2", "stream", "ingest"],
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
