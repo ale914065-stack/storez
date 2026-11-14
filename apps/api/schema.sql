@@ -1,8 +1,47 @@
 DROP TABLE IF EXISTS products;
 CREATE TABLE products (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  id INTEGER PRIMARY KEY,
   name TEXT NOT NULL,
   description TEXT NOT NULL DEFAULT '',
-  price INTEGER NOT NULL, -- VND
-  image TEXT NOT NULL
+  price INTEGER NOT NULL,
+  oldPrice INTEGER NOT NULL DEFAULT 0,
+  image TEXT NOT NULL,
+  gallery TEXT DEFAULT '[]',
+  category TEXT DEFAULT 'Phụ kiện',
+  brand TEXT DEFAULT 'TechStore',
+  specs TEXT DEFAULT '',
+  structuredSpecs TEXT DEFAULT '{}',
+  colors TEXT DEFAULT '[]',
+  storageOptions TEXT DEFAULT '[]',
+  rating REAL DEFAULT 4.9,
+  reviewCount INTEGER DEFAULT 100,
+  soldCount INTEGER DEFAULT 200,
+  stock INTEGER DEFAULT 25,
+  freeship INTEGER DEFAULT 1,
+  installment0 INTEGER DEFAULT 1,
+  isFlashSale INTEGER DEFAULT 0,
+  flashSalePrice INTEGER DEFAULT 0,
+  flashSaleSold INTEGER DEFAULT 0,
+  flashSaleTotal INTEGER DEFAULT 0,
+  isFlagship INTEGER DEFAULT 0,
+  frequentlyBoughtIds TEXT DEFAULT '[]'
+);
+
+CREATE TABLE IF NOT EXISTS orders (
+  id TEXT PRIMARY KEY,
+  customerName TEXT,
+  phone TEXT,
+  province TEXT,
+  district TEXT,
+  address TEXT,
+  shippingMethod TEXT,
+  paymentMethod TEXT,
+  items TEXT,
+  subtotal INTEGER,
+  shippingFee INTEGER,
+  discount INTEGER,
+  total INTEGER,
+  voucherCode TEXT,
+  status TEXT,
+  createdAt TEXT
 );
